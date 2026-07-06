@@ -1,0 +1,19 @@
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+npm-debug.log*
+.vscode/
+
+# Environment variables — ignore all .env files everywhere
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Allow .env.example templates to be committed
+!.env.example
+!**/.env.example
