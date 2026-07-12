@@ -46,7 +46,7 @@ const RegisterPage = () => {
       <div className="glass-card p-8">
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold text-dark-800 dark:text-white mb-2">Create Account</h1>
-          <p className="text-dark-400 dark:text-dark-500">Join LinkVault and start saving links</p>
+          <p className="text-dark-400 dark:text-dark-500">Join Stashly and start saving links</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">

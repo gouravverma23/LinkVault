@@ -39,7 +39,7 @@ const LoginPage = () => {
       <div className="glass-card p-8">
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold text-dark-800 dark:text-white mb-2">Welcome Back</h1>
-          <p className="text-dark-400 dark:text-dark-500">Sign in to your LinkVault account</p>
+          <p className="text-dark-400 dark:text-dark-500">Sign in to your Stashly account</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">

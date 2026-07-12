@@ -15,7 +15,7 @@ const AuthLayout = () => {
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
             <Bookmark className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold gradient-text">LinkVault</span>
+          <span className="text-xl font-bold gradient-text">Stashly</span>
         </Link>
         <ThemeToggle />
       </header>

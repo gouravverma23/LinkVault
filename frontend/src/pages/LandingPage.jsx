@@ -65,7 +65,7 @@ const LandingPage = () => {
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/30">
             <Bookmark className="w-5 h-5 text-white" />
           </div>
-          <span className="text-2xl font-bold gradient-text">LinkVault</span>
+          <span className="text-2xl font-bold gradient-text">Stashly</span>
         </Link>
         <div className="flex items-center gap-3">
           <ThemeToggle />
@@ -108,7 +108,7 @@ const LandingPage = () => {
             </h1>
 
             <p className="text-lg lg:text-xl text-dark-500 dark:text-dark-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Stop losing important links. LinkVault helps you save, organize, and find your bookmarks in seconds with powerful search, collections, and analytics.
+              Stop losing important links. Stashly helps you save, organize, and find your bookmarks in seconds with powerful search, collections, and analytics.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -232,7 +232,7 @@ const LandingPage = () => {
                 Ready to Organize Your Links?
               </h2>
               <p className="text-lg text-dark-500 dark:text-dark-400 mb-8 max-w-xl mx-auto">
-                Join thousands of users who trust LinkVault to manage their bookmarks efficiently.
+                Join thousands of users who trust Stashly to manage their bookmarks efficiently.
               </p>
               <Link
                 to={isAuthenticated ? '/dashboard' : '/register'}
@@ -252,10 +252,10 @@ const LandingPage = () => {
             <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
               <Bookmark className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="text-sm font-semibold gradient-text">LinkVault</span>
+            <span className="text-sm font-semibold gradient-text">Stashly</span>
           </div>
           <p className="text-sm text-dark-400 dark:text-dark-500">
-            © {new Date().getFullYear()} LinkVault. Built with ❤️
+            © {new Date().getFullYear()} Stashly. Built with ❤️
           </p>
         </div>
       </footer>

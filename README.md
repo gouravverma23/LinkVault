@@ -1,4 +1,4 @@
-# 🔗 LinkVault — Smart Bookmark Manager
+# 🔗 Stashly — Smart Bookmark Manager
 
 A modern, full-stack Bookmark Manager application built with React, Node.js, Express, and MongoDB.
 
@@ -70,7 +70,7 @@ A modern, full-stack Bookmark Manager application built with React, Node.js, Exp
 ### 1. Clone the repository
 ```bash
 git clone <your-repo-url>
-cd bookmarkManager
+cd stashly
 ```
 
 ### 2. Install dependencies
@@ -108,7 +108,7 @@ npm run client   # Frontend on port 5173
 ## 📁 Project Structure
 
 ```
-bookmarkManager/
+stashly/
 ├── backend/
 │   ├── config/
 │   │   └── db.js              # MongoDB connection
