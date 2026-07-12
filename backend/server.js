@@ -15,16 +15,22 @@ connectDB();
 
 const app = express();
 
+// Trust first proxy (required for Render, Railway, etc.)
+// Without this, all requests appear from the same IP, breaking rate limiting
+app.set('trust proxy', 1);
+
 // --- Security Middleware ---
 
 // Helmet: sets secure HTTP headers (removes X-Powered-By, adds XSS filters, etc.)
 app.use(helmet());
 
 // CORS
+const allowedOrigin = process.env.NODE_ENV === 'production'
+  ? (process.env.CLIENT_URL || '').replace(/\/+$/, '') // strip trailing slash
+  : 'http://localhost:5173';
+
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? process.env.CLIENT_URL
-    : 'http://localhost:5173',
+  origin: allowedOrigin,
   credentials: true,
 }));
 
@@ -46,7 +52,7 @@ const generalLimiter = rateLimit({
 
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5,                    // 5 attempts per window per IP
+  max: 20,                   // 20 attempts per window per IP
   standardHeaders: true,
   legacyHeaders: false,
   message: { message: 'Too many login attempts, please try again after 15 minutes.' },
@@ -76,5 +82,6 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode`);
+  console.log(`🌐 CORS origin: ${allowedOrigin || '⚠️  NOT SET — check CLIENT_URL env var'}`);
 });
 
